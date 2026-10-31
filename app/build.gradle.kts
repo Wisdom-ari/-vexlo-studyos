@@ -6,6 +6,16 @@ plugins {
 android {
     namespace = "space.vexlo.studyos"
     compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         applicationId = "space.vexlo.studyos"
         minSdk = 26
@@ -13,7 +23,7 @@ android {
         versionCode = 1
         versionName = "1.0.0"
     }
-    buildFeatures { compose = true }
+}    buildFeatures { compose = true }
 }
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.12.01"))
